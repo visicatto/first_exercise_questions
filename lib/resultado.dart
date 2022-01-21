@@ -4,7 +4,8 @@ class Resultado extends StatelessWidget {
   final int pontuacao;
   final void Function() quandoReiniciarQuestionario;
 
-  Resultado(this.pontuacao, this.quandoReiniciarQuestionario);
+  const Resultado(this.pontuacao, this.quandoReiniciarQuestionario, {Key? key})
+      : super(key: key);
 
   String get fraseResultado {
     if (pontuacao < 8) {
@@ -26,11 +27,11 @@ class Resultado extends StatelessWidget {
         Center(
           child: Text(
             fraseResultado,
-            style: TextStyle(fontSize: 28),
+            style: const TextStyle(fontSize: 28),
           ),
         ),
         TextButton(
-          child: Text(
+          child: const Text(
             'Reiniciar?',
             style: TextStyle(
               fontSize: 18,

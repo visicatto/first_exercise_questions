@@ -7,11 +7,12 @@ class Questionario extends StatelessWidget {
   final int perguntaSelecionada;
   final void Function(int) quandoResponder;
 
-  Questionario({
+  const Questionario({
+    Key? key,
     required this.perguntas,
     required this.perguntaSelecionada,
     required this.quandoResponder,
-  });
+  }) : super(key: key);
 
   bool get temPerguntaSelecionada {
     return perguntaSelecionada < perguntas.length;
